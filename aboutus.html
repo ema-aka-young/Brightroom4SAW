@@ -1,65 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-       	<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>FilmSearch</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/js/all.js">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
- <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>FilmSearch</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/js/all.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
 
- <!-- Navigation-->
-		<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-		 <a class="navbar-brand" href="#">FilmSearch</a>
-			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item ml-auto ">
-						<a class="nav-link" href="index.html">HOME</a>
-					</li>
 
-					<li class="nav-item ml-auto">
-						<a class="nav-link a-login" href="">FILM</a>
-					</li>
 
-					<li class="nav-item ml-auto">
-						<a class="nav-link a-login" href="">BLOG</a>
-					</li><li class="nav-item ml-auto">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
 
-            <li class="nav-item ml-auto active">
-              <a class="nav-link a-login" href="aboutus.html">ABOUT US</a>
-            </li>
-
-							<a class="nav-link a-login" href="admin/login.php">LOGIN</a>
-						</li></ul>
-			</div>
-		</nav>
-
-    <div class="row align-items-center justify-content-center">
-      <div class="col">This will be centered vertically and horizontally</div> </div>
-
-      <div class="container">
-
-        <div class="align-items-center">
-          	<div class="col-auto">
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in </h3>
-            </div>
-          </div>
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html">FilmSearch</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact Us</a></li>
 
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-</body>
-</html>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header>
+
+
+  <!-- ======= Hero Section ======= -->
+  
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>Welcome to Maxim</h1>
+      <h2>We are team of talanted designers making websites with Bootstrap</h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-xl-6 col-lg-7" data-aos="fade-right">
+                <img src="assets/img/about-img.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0">
+                <h3 data-aos="fade-up">Not sure which film stock to buy?</h3>
+                <p data-aos="fade-up">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div class="icon-box" data-aos="fade-up">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Corporis voluptates sit</h4>
+                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Ullamco laboris nisi</h4>
+                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Ullamco laboris nisi</h4>
+                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section><!-- End About Section -->
+
+  </main><!-- End #main -->
+
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+      </body>
+      </html>
