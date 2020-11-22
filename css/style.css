@@ -383,29 +383,67 @@ h1, h2, h3, h4, h5, h6 {
 
 /* da fare check vorrei non toccare input-group generale */
 
-#hero .input-group {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%; /*changed*/
+input {
+	margin: 50px 0;
+	background: none;
+	border-bottom: 1px solid black;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	width: 200px;
+	height: 30px;
 }
 
-.btn-primary{
-    background: black;
-    color: white;
-    border: black;
-    transition: background 0.5s ease-in-out;
+input:focus {
+	outline: none;
+	border-bottom: 3px solid black;
+	color: black;
 }
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:hover, .btn-primary:focus{
-    background: #6F6E6E;
-    border: #6F6E6E;
-    box-shadow: none  !important;
-    outline: 0 !important;
-    outline-offset: 0  !important;
+
+::-webkit-input-placeholder {
+	color: black;
+	font-weight: bold;
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: black;
+	font-weight: bold;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: black;
+	font-weight: bold;
+}
+
+:-ms-input-placeholder {
+	color: black;
+	font-weight: bold;
+}
+
+button {
+	width: 50px;
+	height: 50px;
+	background: none;
+	border: none;
+	position: absolute;
+	top: 200px;
+	left: 275px;
+}
+
+button:focus {
+	outline: none;
+}
+
+.fas {
+	color: black;
+	font-size: 2em;
+}
+
+.container2 {
+	width: 90%;
+	margin: 0 auto;
 }
 /*--------------------------------------------------------------
 # About Us

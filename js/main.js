@@ -1,3 +1,17 @@
+/*button search*/
+
+$("button").click(function(event){
+	event.preventDefault()
+	$("input").animate({
+		width: 'toggle'
+	}, 150, function() {
+		// animation complete
+	});
+});
+
+/*--------------------*/
+
+
 $(document).ready(function(){
 	var offset = 100;
 
@@ -6,9 +20,9 @@ $(document).ready(function(){
 		$(".admin-container").children(".container").addClass("no-opacity");
     }
 
-	$(document).scroll(function() { 
+	$(document).scroll(function() {
 		var scrollStart = $(this).scrollTop();
-	
+
 		if(scrollStart > offset){
 			$(".fixed-top").addClass("primary");
 			$(".admin-container").children(".container").addClass("no-opacity");
