@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+<!--   <head>
       <title>FilmSearch</title>
      <link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon">
      <link rel="icon" href="/progettosaw/favicon.ico" type="image/x-icon">
@@ -14,12 +14,13 @@
       <link rel="stylesheet" type="text/css" href="css/aos.css">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   </head>
+   </head> -->
+   <?php
+        require 'common/header.php';
+   ?>
    <body>
          <!-- ======= Header ======= -->
-<?php
-     require 'common/header.php';
-?>
+
 
       <!-- ======= Hero Section ======= -->
       <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
