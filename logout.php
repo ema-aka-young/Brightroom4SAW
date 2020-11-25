@@ -3,5 +3,5 @@
 	session_unset();
 	session_destroy();
 	setcookie(session_name(), '', time()-42000);
-	header("Location: index.html");
+	header("Location: index.php");
 ?>
