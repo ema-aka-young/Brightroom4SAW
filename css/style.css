@@ -381,7 +381,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /*SEARCH*/
 
-/* da fare check vorrei non toccare input-group generale */
 
 input {
 	margin: 50px 0;
@@ -433,15 +432,11 @@ button:focus {
 	outline: none;
 }
 
-.fas {
-	color: black;
-	font-size: 2em;
-}
-
 .container2 {
 	width: 90%;
 	margin: 0 auto;
 }
+
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
