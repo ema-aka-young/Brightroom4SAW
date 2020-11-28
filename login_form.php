@@ -21,19 +21,22 @@
 </head>
 
 <body>
-	<h1>Login:</h1>
-	<div class="reg_form_div">
-		<form action="login.php" method="post">
-			<i class="fa fa-at fa-2x"></i>
-			<input type="email" id="email" name="email" placeholder="E-mail">
+	<div class="container" >
+	    <div class="text-center" >
+	        <div id="logbox"  >
+	            	<form action="login.php" method="post">
+	                <h1>LogIn:</h1>
+	                                <form action="registration.php" method="post" class="reg_form">
+																			<div id="signup_list">
+	                                    	<input type="email" id="email" name="email" placeholder="E-mail">
+																				<input type="password" id="pass" name="pass" placeholder="Password">
+	                										  <input type="submit" value="Submit"/>
+																		</div>
 
-			<i class="fa fa-key fa-2x"></i>
-			<input type="password" id="pass" name="pass" placeholder="Password">
-
-			<input type="submit" value="Submit">
-		</form>
+	            </form>
+	        </div>
+	    </div>
 	</div>
-
 
 <?php
 	require('common/footer.php');
