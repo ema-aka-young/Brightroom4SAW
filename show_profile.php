@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
+<!--
 <head>
-<title>Gruppo 13</title>
 <link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon">
 <link rel="icon" href="/progettosaw/favicon.ico" type="image/x-icon">
 <meta charset="utf-8">
@@ -14,18 +14,20 @@
 <link rel="stylesheet" type="text/css" href="css/aos.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head> -->
+<head>
+			<title>FilmSearch - Your Profile</title>
 </head>
+<?php
+require 'common/header.php';
+?>
 <body>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 <h1>Show Profile</h1>
 <?php
-	require('common/header.php'); //for session
+	#require('common/header.php'); //for session
 	require('common/db_conn.php'); //for database connection
 	echo "Ciao user con id = " . $_SESSION["id"] . ".<br>";
 

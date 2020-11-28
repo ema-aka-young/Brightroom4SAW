@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html>
+
+<head>
+			<title>FilmSearch - Login</title>
+</head>
+<?php
+require 'common/header.php';
+?>
+
+<!--<html>
 <head>
 	<title>Gruppo 13 FORM</title>
 	<link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon">
@@ -14,11 +22,9 @@
  	<link rel="stylesheet" type="text/css" href="css/aos.css">
  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<?php
-		require('common/header.php');
-	?>
 
-</head>
+
+</head>-->
 
 <body>
 	<div class="container" >

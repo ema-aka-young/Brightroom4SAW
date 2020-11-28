@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!--
 <head>
 	<title>SignUp</title>
 	<link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon">
@@ -14,6 +15,9 @@
  	<link rel="stylesheet" type="text/css" href="css/aos.css">
  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<head> -->
+			<title>FilmSearch - Signup</title>
 </head>
 
 <?php

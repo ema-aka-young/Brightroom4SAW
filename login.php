@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>Sign-up</title>
+    <title>FilmSearch - Sign-up</title>
     <?php
     require 'common/head.php'
     ?>
 
 </head>
 
+<!--
 <html lang="en">
    <head>
      <link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon">
@@ -24,6 +25,7 @@
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    </head>
+ -->
 
 <body>
 

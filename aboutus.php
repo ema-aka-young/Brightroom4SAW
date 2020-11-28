@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--<html lang="en">
    <head>
      <link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon">
      <link rel="icon" href="/progettosaw/favicon.ico" type="image/x-icon">
@@ -17,7 +17,10 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    </head>
    <body>
-     <!-- ======= Header ======= -->
+     < ======= Header ======= -->
+     <head>
+           <title>FilmSearch - About Us</title>
+     </head>
 <?php
  require 'common/header.php';
 ?>
