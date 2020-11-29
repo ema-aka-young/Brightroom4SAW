@@ -8,6 +8,11 @@
 	require('common/header.php'); //for session
 	require('common/db_conn.php'); //for database connection
 	#echo "Ciao user con id = " . $_SESSION["id"] . ".<br>";
+	if (!isset($_SESSION["login"])):
+		$error = "Non hai ancora fatto il login";
+		$_SESSION['error'] = $error;
+		header ("Location: error.php");
+	endif;
 
 	$query = "select * from utenti where id = " . $_SESSION["id"].";";
 	$res = mysqli_query($con, $query);
@@ -34,16 +39,7 @@
 				</form>
 			</div>
 	 </div>
-</div>
-
-
+	</div>
+</body>
 <?php require 'common/footer.php' ?>
-</body>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/aos.js"></script>
-</body>
-<script>
-AOS.init();
-</script>
 </html>

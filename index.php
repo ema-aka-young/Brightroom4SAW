@@ -22,11 +22,14 @@
       <main id="main">
       </main>
       <!-- End #main -->
-      <script type="text/javascript" src="js/bootstrap.js"></script>
+  </body>
+  <!--    <script type="text/javascript" src="js/bootstrap.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
       <script type="text/javascript" src="js/aos.js"></script>
-   </body>
+
    <script>
       AOS.init();
-   </script>
+   </script> -->
+   <?php require 'common/footer.php' ?>
+
 </html>

@@ -6,6 +6,13 @@
    require 'common/header.php';
    ?>
 <body>
+  <?php
+     if (isset($_SESSION["login"])):
+       $error = "Hai già fatto il login";
+       $_SESSION['error'] = $error;
+       header ("Location: error.php");
+   endif;
+       ?>
    <div class="container" data-aos="fade-up">
       <div class="text-center" >
          <div id="logbox">
@@ -20,15 +27,8 @@
          </div>
       </div>
    </div>
-   <?php
-      require('common/footer.php');
-      ?>
 </body>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/aos.js"></script>
-</body>
-<script>
-   AOS.init();
-</script>
+<?php
+   require('common/footer.php');
+   ?>
 </html>

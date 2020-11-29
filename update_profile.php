@@ -8,6 +8,11 @@
          require 'common/header.php';
          require 'common/db_conn.php';
 
+         if (!isset($_SESSION["login"])):
+           $error = "Non hai ancora fatto il login";
+           $_SESSION['error'] = $error;
+           header ("Location: error.php");
+         endif;
 
          echo "<h4> GET values:</h4>";
          echo "<p> " . $_POST['nome'] . "</p>";
@@ -30,4 +35,6 @@
          	//header('location: index.php');
          }
 
-         ?>
+         
+require 'common/footer.php' ?>
+</html>
