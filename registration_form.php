@@ -19,8 +19,6 @@
          <div class="text-center" >
             <div id="logbox">
                <form action="registration.php" method="post" class="reg_form">
-                  <h1>Sign-up!</h1>
-               <form action="registration.php" method="post" class="reg_form">
                   <div id="signup_list">
                      <input type="text" id="firstname" name="firstname" placeholder="Firstname" pattern="^[^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,128}$"  required/>
                      <input type="text" id="lastname" name="lastname" placeholder="Lastname" pattern="^[^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,128}$"  required/>
@@ -28,12 +26,14 @@
                      <input type="password" id="pass" name="pass" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,256}"
                         title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" >
                      <input type="password" id="confirm" name="confirm" placeholder="Confirm password">
-                     <input type="submit" value="Submit"/>
+                     <div id="msg"></div>
+                     <input type="submit" id="register" value="Submit" disabled="disabled"/>
                   </div>
                </form>
             </div>
          </div>
       </div>
+      <script src="/js/psw_check.js"></script>
    </body>
       <?php
          require('common/footer.php');
