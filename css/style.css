@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -192,8 +193,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: 25px;
+  top: 1px;
   z-index: 9998;
   border: 0;
   background: none;
@@ -206,14 +207,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #fff;
+  color: black;
 }
 
 .mobile-nav {
   position: fixed;
   top: 55px;
   right: 15px;
-  bottom: 15px;
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
@@ -234,20 +234,19 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #21413c;
+  color: black;
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #1bac91;
+  font-weight: bold;
   text-decoration: none;
 }
 
 .mobile-nav .drop-down > a:after {
   content: "\ea99";
-  font-family: IcoFont;
   padding-left: 10px;
   position: absolute;
   right: 15px;
@@ -293,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-active .mobile-nav-toggle i {
-  color: #fff;
+  color: black;
 }
 
 /*--------------------------------------------------------------
@@ -483,6 +482,7 @@ img-about{
         padding: 20px;
         margin: 50px auto;
         width: 340px;
+        border-radius: 10px;
         background-color: #fff;
         -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
         -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
