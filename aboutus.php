@@ -56,13 +56,6 @@
       </main>
       <!-- End #main -->
   </body>
-  <!--    <script type="text/javascript" src="js/bootstrap.js"></script>
-      <script type="text/javascript" src="js/main.js"></script>
-      <script type="text/javascript" src="js/aos.js"></script>
-
-   <script>
-      AOS.init();
-   </script> -->
    <?php require 'common/footer.php' ?>
 
 </html>

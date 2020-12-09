@@ -11,7 +11,6 @@
 <body>
   <?php
   $error=$_SESSION['error'];
-#  echo "$error"
   ?>
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
      <div class="container text-center text-md-left" data-aos="fade-up">

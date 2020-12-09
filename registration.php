@@ -6,7 +6,7 @@
 <body>
 <?php
   require('common/header.php');
-	require 'common/db_conn.php'; //per connessione database
+	require('common/db_conn.php'); //per connessione database
 	//TODO: controlla che i campi siano tutti compilati
 if(!isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['pass']))
 {

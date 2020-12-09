@@ -7,7 +7,6 @@
 <?php
 	require('common/header.php'); //for session
 	require('common/db_conn.php'); //for database connection
-	#echo "Ciao user con id = " . $_SESSION["id"] . ".<br>";
 	if (!isset($_SESSION["login"])):
 		$error = "Non hai ancora fatto il login";
 		$_SESSION['error'] = $error;
