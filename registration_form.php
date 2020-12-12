@@ -22,7 +22,8 @@
                   <div id="signup_list">
                      <input type="text" id="firstname" name="firstname" placeholder="Firstname" pattern="^[^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,128}$"  required/>
                      <input type="text" id="lastname" name="lastname" placeholder="Lastname" pattern="^[^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,128}$"  required/>
-                     <input type="email" id="email" name="email" placeholder="E-mail" minlenght="3" maxlength="256" required/>
+                     <input type="email" id="email" name="email" placeholder="E-mail" minlenght="3" maxlength="256" onchange="checkEmail('checkEmailinDb.php')" required/>
+                     <div id="mail_err">ss </span>
                      <input type="password" id="pass" name="pass" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,256}"
                         title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" >
                      <input type="password" id="confirm" name="confirm" placeholder="Confirm password">
@@ -34,6 +35,22 @@
          </div>
       </div>
       <script src="/js/psw_check.js"></script>
+<script>
+      function checkEmail(){
+      $.post("checkEmailinDb.php", 
+      {email: $("#email").val()},
+      function(data){
+         if(data == 1){
+            $("#mail_err").html("Email already in use");
+         }
+         else{
+            $("#mail_err").hide();
+         }
+      });
+   return false;
+}
+</script>
+
    </body>
       <?php
          require('common/footer.php');

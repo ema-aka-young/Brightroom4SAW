@@ -8,6 +8,10 @@
 <?php
   session_start();
 	require 'common/db_conn.php'; //per connessione database
+	if(!isset($_POST['email'], $_POST['pass']))
+	{
+  	header("Location: login_form.php");
+	}
 	$email = mysqli_real_escape_string($con, trim($_POST["email"]));
 	$pssw = mysqli_real_escape_string($con, trim($_POST["pass"]));
 
