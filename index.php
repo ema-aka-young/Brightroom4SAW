@@ -7,9 +7,9 @@
         require 'common/header.php';
    ?>
    <body>
-      <!-- ======= Hero Section ======= -->
+      <!-- ======= Hero Section =======-->
       <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-         <div class="container text-center text-md-left" data-aos="fade-up">
+         <div class="container text-align-top text-center text-md-left" data-aos="fade-up">
             <h1>Looking for a film stock?</h1>
             <h2>Get inspired! </h2>
             <div class="container2" data-aos="fade-left">

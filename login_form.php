@@ -21,7 +21,7 @@
                <div id="signup_list">
                   <input type="email" id="email" name="email" placeholder="E-mail">
                   <input type="password" id="pass" name="pass" placeholder="Password">
-                  <input type="submit" value="Submit"/>
+                  <input type="submit" value="Submit"  disabled="disabled"/>
                </div>
             </form>
          </div>

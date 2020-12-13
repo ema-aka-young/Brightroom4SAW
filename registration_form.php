@@ -28,7 +28,7 @@
                         title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" >
                      <input type="password" id="confirm" name="confirm" placeholder="Confirm password">
                      <div id="msg"></div>
-                     <input type="submit" id="register" value="Submit" />
+                     <input type="submit" id="register" value="Submit"  disabled="disabled"/>
                   </div>
                </form>
             </div>
