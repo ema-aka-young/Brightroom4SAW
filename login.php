@@ -7,6 +7,7 @@
 
 <?php
   session_start();
+  require 'common/header.php';
 	require 'common/db_conn.php'; //per connessione database
 	if(!isset($_POST['email'], $_POST['pass']))
 	{
