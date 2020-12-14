@@ -6,7 +6,8 @@
 <body>
 
 <?php
-  session_start();
+
+
   require 'common/header.php';
 	require 'common/db_conn.php'; //per connessione database
 	if(!isset($_POST['email'], $_POST['pass']))
@@ -29,8 +30,11 @@
 	    exit();
 
 	} else {
-	    echo "<br> <h3> Email o password errati, riprovare! :( </h3> <br>";
-	    echo "<p><a href='login_form.php'>Try again</a></p>";
+
+      $error = "<br> <h2> Email o password errati,  :( <u><a href='login_form.php'>riprovare!</a></u></h2> ";
+      $_SESSION['error'] = $error;
+      header ("Location: error.php");
+
 	}
 
 ?>
