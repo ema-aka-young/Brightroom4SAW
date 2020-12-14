@@ -1,14 +1,12 @@
 <?php
- require 'common/db_conn.php'; //per connessione database
+    require 'common/db_conn.php'; 
+    $email = mysqli_real_escape_string($con, trim($_POST['email']));
 
- $email = mysqli_real_escape_string($con, trim($_GET['email']));
-
- $query = "select email from utenti where email = '$email' ";
- $res = mysqli_query($con,$query);
- 
- if(mysqli_num_rows($res) >0){
-  echo json_encode(1); 
- }
- else echo json_encode(0);
- exit();
+    $query = "SELECT email FROM utenti WHERE email = '$email' ";
+    $res = mysqli_query($con,$query);   
+    if (mysqli_num_rows($res) >0) {
+        echo "Email already taken";
+    }
+    else echo "";
+    exit();
 ?>

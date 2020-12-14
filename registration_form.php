@@ -37,23 +37,20 @@
       <script src="/js/psw_check.js"></script>
 
 <script>
-      function checkEmail(){
- $.ajax({
-  url: "checkEmailinDb.php",
-  data: {
-   'email': $("#email").val()
-  },
-  dataType: 'json',
-  success: function(data){
-   if(data == 1){
-    $("#email_err").html("Email già presente");
-   }
-   else{
-    $("#email_err").hide();
-   }
-  }
- });
- return false;
+     function checkEmail() {
+  var xhttp = new XMLHttpRequest();
+  var mail = document.getElementById("email").value;
+  var sendReq = "email="+mail;
+  console.log(sendReq);
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("email_err").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open('POST', 'checkEmailinDb.php', true);
+  xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhttp.send(sendReq);
 }
 </script>
 
