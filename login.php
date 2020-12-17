@@ -13,6 +13,7 @@
 	if(!isset($_POST['email'], $_POST['pass']))
 	{
   	header("Location: login_form.php");
+  	exit();
 	}
 	$email = mysqli_real_escape_string($con, trim($_POST["email"]));
 	$pssw = mysqli_real_escape_string($con, trim($_POST["pass"]));
@@ -31,9 +32,11 @@
 
 	} else {
 
+
       $error = "<br> <h2> Email o password errati,  :( <u><a href='login_form.php'>riprovare!</a></u></h2> ";
       $_SESSION['error'] = $error;
       header ("Location: error.php");
+      exit();
 
 	}
 

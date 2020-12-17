@@ -30,8 +30,8 @@
 				<form action="update_profile.php" method="POST">
 					<h1>Profile</h1>
 					<div id="signup_list">
-						<input type="text" id="nome" name="nome" value= "<?php echo $row['nome']; ?>" />
-						<input type="text" id="surname" name="surname" value= "<?php echo $row['cognome']; ?>" />
+						<input type="text" id="firstname" name="firstname" value= "<?php echo $row['nome']; ?>" />
+						<input type="text" id="lastname" name="lastname" value= "<?php echo $row['cognome']; ?>" />
 						<input type="email" id ="email" name="email" value= "<?php echo $row['email']; ?>"/>
 						<input type="submit" value="Update profile">
 						</div>
