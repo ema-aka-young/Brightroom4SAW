@@ -16,7 +16,7 @@
    <div class="container" data-aos="fade-up">
       <div class="text-center" >
          <div id="logbox">
-            <h1>LogIn:</h1>
+            <h1>Login:</h1>
             <form action="login.php" method="post">
                <div id="signup_list">
                   <input type="email" id="email" name="email" placeholder="E-mail">

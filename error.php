@@ -16,7 +16,7 @@
      <div class="container text-center text-md-left" data-aos="fade-up">
         <h1>Error!</h1>
         <h2><?php echo "$error"?></h2>
-        <img class="img-fluid float-right" src="images/error_monkey.gif" alt="...">
+        <img class="img-fluid float-right" src="images/error_monkey.gif" alt="error monkey">
      </div>
   </section>
 

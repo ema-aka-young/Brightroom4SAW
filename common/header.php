@@ -31,7 +31,7 @@
                <li class="<?php if ($activePage=="index.php" || $activePage=="") {echo "active"; } else  {echo "noactive";}?>"><a href="index.php">Home</a></li>
                <li class="<?php if ($activePage=="aboutus.php") {echo "active"; } else  {echo "noactive";}?>"><a href="aboutus.php">About Us</a></li>
                <li class="<?php if ($activePage=="film") {echo "active"; } else  {echo "noactive";}?>"><a href="#film">Film</a></li>
-               <li class="<?php if ($activePage=="blog") {echo "active"; } else  {echo "noactive";}?>"><a href="blog.php">Blog</a></li>
+               <li class="<?php if ($activePage=="blog") {echo "active"; } else  {echo "noactive";}?>"><a href="blog_list.php">Blog</a></li>
                <?php
                   if (!isset($_SESSION["login"])): ?>
                <li class="<?php if ($activePage=="login_form.php") {echo "active"; } else  {echo "noactive";}?>"><a href="login_form.php">Login</a></li>

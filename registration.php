@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>FilmSearch - Sign-up</title>
+    <title>FilmSearch - Welcome</title>
 </head>
 <body>
 <?php
-  session_start();
+  require('common/header.php');
 	require('common/db_conn.php'); //per connessione database
 	//TODO: controlla che i campi siano tutti compilati
 if(!isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['pass']))
@@ -21,16 +21,20 @@ else {
 }
 	$res = mysqli_query($con,$query);
 	if (mysqli_affected_rows($con)==1){
-
-		echo "<h1>";
-	        echo "Hello ";
-	        echo "$nome " . "$cogn ";
-	        echo "your data have been registered.";
-	    echo "</h1>\n";
-	    //todo timer (js?)
-	   	//header("Location: index.php");
+ //TODO timer (js?)
+echo "
+<section id=\"hero\" class=\"d-flex flex-column justify-content-center align-items-center\">
+    <div class=\"container text-align-top text-center text-md-center\" data-aos=\"fade-up\">
+       <div class=\"clearfix\">
+       <img class=\"img-fluid float-center\" src=\"/images/welcome.png\" alt=\"Welcome\"> ";
+       echo "<h1>Welcome, ";
+       echo "$nome " . "$cogn ";
+       echo "</h1>
+       </div>
+    </div>
+</section>";
     }
     mysqli_close($con);
 ?>
-</body>
+ <?php require 'common/footer.php' ?>
 </html>
