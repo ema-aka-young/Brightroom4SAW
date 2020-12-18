@@ -17,7 +17,7 @@ else {
 	$cogn = mysqli_real_escape_string($con, trim($_POST["lastname"]));
 	$email = mysqli_real_escape_string($con, trim($_POST["email"]));
 	$pass = password_hash(mysqli_real_escape_string($con,trim($_POST["pass"])), PASSWORD_DEFAULT);
-	$query = "INSERT INTO utenti (nome, cognome, email, password) VALUES ('$nome', '$cogn', '$email', '$pass')";
+	$query = "INSERT INTO users (nome, cognome, email, password) VALUES ('$nome', '$cogn', '$email', '$pass')";
 }
 	$res = mysqli_query($con,$query);
 	if (mysqli_affected_rows($con)==1){
@@ -27,9 +27,10 @@ echo "
     <div class=\"container text-align-top text-center text-md-center\" data-aos=\"fade-up\">
        <div class=\"clearfix\">
        <img class=\"img-fluid float-center\" src=\"/images/welcome.png\" alt=\"Welcome\"> ";
-       echo "<h1>Welcome, ";
+       echo "<h1>Welcome on board, ";
        echo "$nome " . "$cogn ";
-       echo "</h1>
+       echo "!</h1>";
+       echo "<p>Click here to start using FilmSearch.</p>
        </div>
     </div>
 </section>";

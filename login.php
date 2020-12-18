@@ -18,7 +18,7 @@
 	$email = mysqli_real_escape_string($con, trim($_POST["email"]));
 	$pssw = mysqli_real_escape_string($con, trim($_POST["pass"]));
 
-  	$query = "SELECT id, password from utenti where email = '$email';";
+  	$query = "SELECT id, password from users where email = '$email';";
   	$res = mysqli_query($con,$query);
   	$pssw_db = mysqli_fetch_assoc($res);
 
