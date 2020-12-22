@@ -11,6 +11,7 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
       <link rel="stylesheet" type="text/css" href="css/aos.css">
+      <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    </head>
@@ -32,6 +33,10 @@
                <li class="<?php if ($activePage=="aboutus.php") {echo "active"; } else  {echo "noactive";}?>"><a href="aboutus.php">About Us</a></li>
                <li class="<?php if ($activePage=="film") {echo "active"; } else  {echo "noactive";}?>"><a href="#film">Film</a></li>
                <li class="<?php if ($activePage=="blog") {echo "active"; } else  {echo "noactive";}?>"><a href="blog_list.php">Blog</a></li>
+               <?php
+                  if (isset($_SESSION["admin"])): ?>
+               <li class="<?php if ($activePage=="admin.php") {echo "active"; } else  {echo "noactive";}?>"><a href="admin.php">Admin</a></li>
+               <?php endif; ?>
                <?php
                   if (!isset($_SESSION["login"])): ?>
                <li class="<?php if ($activePage=="login_form.php") {echo "active"; } else  {echo "noactive";}?>"><a href="login_form.php">Login</a></li>
