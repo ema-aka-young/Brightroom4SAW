@@ -11,9 +11,11 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
       <link rel="stylesheet" type="text/css" href="css/aos.css">
-      <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css">
+     <!-- <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css"> -->
+      <link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     
    </head>
    <header id="header" class="sticky-top">
       <?php

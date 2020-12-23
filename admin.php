@@ -56,14 +56,16 @@
       </section>
   </body>
 
+
+
+
+  <?php require 'common/footer.php' ?>
 <script>
     $(document).ready(function(){
     $('#usersdata').DataTable();
 } );
 </script>
-
-
-  <?php require 'common/footer.php' ?>
+  
   </html>
 
   
