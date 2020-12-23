@@ -23,7 +23,7 @@
          $directoryURI = $_SERVER['REQUEST_URI'];
          $path = parse_url($directoryURI, PHP_URL_PATH);
          $components = explode('/', $path);
-         $activePage = $components[1];
+         $activePage = $components[2];
          ?>
       <div class="container d-flex">
          <div class="logo mr-auto">
