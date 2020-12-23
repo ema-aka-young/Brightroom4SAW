@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon">
-      <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
       <meta name="description" content="" />
@@ -11,7 +10,6 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
       <link rel="stylesheet" type="text/css" href="css/aos.css">
-     <!-- <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css"> -->
       <link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -34,7 +32,7 @@
                <li class="<?php if ($activePage=="index.php" || $activePage=="") {echo "active"; } else  {echo "noactive";}?>"><a href="index.php">Home</a></li>
                <li class="<?php if ($activePage=="aboutus.php") {echo "active"; } else  {echo "noactive";}?>"><a href="aboutus.php">About Us</a></li>
                <li class="<?php if ($activePage=="film") {echo "active"; } else  {echo "noactive";}?>"><a href="#film">Film</a></li>
-               <li class="<?php if ($activePage=="blog") {echo "active"; } else  {echo "noactive";}?>"><a href="blog_list.php">Blog</a></li>
+               <li class="<?php if ($activePage=="blog_list.php") {echo "active"; } else  {echo "noactive";}?>"><a href="blog_list.php">Blog</a></li>
                <?php
                   if (isset($_SESSION["admin"])): ?>
                <li class="<?php if ($activePage=="admin.php") {echo "active"; } else  {echo "noactive";}?>"><a href="admin.php">Admin</a></li>

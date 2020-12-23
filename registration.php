@@ -26,11 +26,11 @@ echo "
 <section id=\"hero\" class=\"d-flex flex-column justify-content-center align-items-center\">
     <div class=\"container text-align-top text-center text-md-center\" data-aos=\"fade-up\">
        <div class=\"clearfix\">
-       <img class=\"img-fluid float-center\" src=\"/images/welcome.png\" alt=\"Welcome\"> ";
+       <img class=\"img-fluid float-center\" src=\"images/welcome.png\" alt=\"Welcome\"> ";
        echo "<h1>Welcome on board, ";
        echo "$nome " . "$cogn ";
        echo "!</h1>";
-       echo "<p>Click here to start using FilmSearch.</p>
+       echo "<p>Click <u><a href='index.php'>here</a></u> to start using FilmSearch.</p>
        </div>
     </div>
 </section>";
