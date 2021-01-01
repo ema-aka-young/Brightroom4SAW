@@ -5,23 +5,28 @@
 </head>
 <body>
 <?php
-  require('common/header.php');
+    require('common/header.php');
 	require('common/db_conn.php'); //per connessione database
-	//TODO: controlla che i campi siano tutti compilati
 if(!isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['pass']))
 {
   header("Location: registration_form.php");
 }
+
+$email = mysqli_real_escape_string($con, trim($_POST['email']));
+$query = "SELECT email FROM users WHERE email = '$email' ";
+$res = mysqli_query($con,$query);
+if (mysqli_num_rows($res) >0) {
+    header("Location: login_form.php");
+}
 else {
 	$nome = mysqli_real_escape_string($con, trim($_POST["firstname"]));
 	$cogn = mysqli_real_escape_string($con, trim($_POST["lastname"]));
-	$email = mysqli_real_escape_string($con, trim($_POST["email"]));
 	$pass = password_hash(mysqli_real_escape_string($con,trim($_POST["pass"])), PASSWORD_DEFAULT);
 	$query = "INSERT INTO users (nome, cognome, email, password) VALUES ('$nome', '$cogn', '$email', '$pass')";
 }
 	$res = mysqli_query($con,$query);
 	if (mysqli_affected_rows($con)==1){
- //TODO timer (js?)
+
 echo "
 <section id=\"hero\" class=\"d-flex flex-column justify-content-center align-items-center\">
     <div class=\"container text-align-top text-center text-md-center\" data-aos=\"fade-up\">
@@ -30,7 +35,7 @@ echo "
        echo "<h1>Welcome on board, ";
        echo "$nome " . "$cogn ";
        echo "!</h1>";
-       echo "<p>Click <u><a href='index.php'>here</a></u> to start using FilmSearch.</p>
+       echo "<p>Click <u><a href='login_here.php'>here</a></u> to start using FilmSearch.</p>
        </div>
     </div>
 </section>";

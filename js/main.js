@@ -50,9 +50,6 @@ if ($('.nav-menu').length) {
 
 /*check if email already exists in DB*/
 
-
-
-
 $(document).ready(function(){
 	var offset = 100;
 

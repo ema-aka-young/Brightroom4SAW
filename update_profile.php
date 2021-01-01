@@ -25,7 +25,7 @@
          echo "<p> " . $_POST['email'] . "</p>";
 
 
-         $query = "update users set nome=?, cognome=?, email=? where id=". $_SESSION['id'] . ";";
+         $query = "UPDATE users SET nome=?, cognome=?, email=? WHERE id=". $_SESSION['id'] . ";";
 
          $stmt = mysqli_prepare($con, $query);
          mysqli_stmt_bind_param($stmt, 'sss', $_POST['firstname'], $_POST['lastname'], $_POST['email']);
@@ -40,6 +40,6 @@
          	//header('location: index.php');
          }
 
-         
+
 require 'common/footer.php' ?>
 </html>
