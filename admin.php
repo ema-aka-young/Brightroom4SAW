@@ -1,91 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-	<title>FilmSearch - Admin</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="https://markcell.github.io/jquery-tabledit/assets/js/tabledit.min.js"></script>
+    <title>FilmSearch - Admin</title>
 </head>
-
+<body>
 
 <?php
-	session_start();
-	//require('common/header.php');
-	//require('common/db_conn.php'); //for database connection
-	if ($_SESSION["admin"]!=1):
-		$error = "Non hai i privilegi per accedere a questa pagina";
-		$_SESSION['error'] = $error;
-		header ("Location: error.php");
-	endif;
-  ?>
+  require 'common/header.php';
+  require 'common/db_conn.php'; //per connessione database
+  if(!isset($_POST['pass']))
+  {
+    header("Location: admin_login.php");
+    exit();
+  }
+
+  	$query = "select * from users where id = " . $_SESSION["id"].";";
+	$res = mysqli_query($con, $query);
+	$row = mysqli_fetch_assoc($res);
+
+  	$email = $row['email'];
+  	$pssw = mysqli_real_escape_string($con, trim($_POST["pass"]));
+
+    $query = "SELECT id,password,role from users where email = '$email';";
+    $res = mysqli_query($con,$query);
+    $pssw_db = mysqli_fetch_assoc($res);
 
 
-  	<div class="container">
-  		<br>
-	   <div class="panel panel-default">
-	    <div class="panel-heading">Admin Dashboard</div>
-	    <div class="panel-body">
-	     <div class="table-responsive">
-	      <table id="usersdata" class="table table-bordered table-striped">
-	       <thead>
-	        <tr>
-	         <th>ID</th>
-	         <th>First Name</th>
-	         <th>Last Name</th>
-	         <th>Email</th>
-			 <th>Role</th>
-	        </tr>
-	       </thead>
-	       <tbody></tbody>
-	      </table>
-	     </div>
-	    </div>
-	   </div>
-	  </div>
+  if (password_verify($pssw,$pssw_db["password"]))
+  {
+      $_SESSION["login"] = 1;
+      $_SESSION["id"] = $pssw_db["id"];
+      /* check if admin then set 1
+      */
+      if ($pssw_db["role"]=='Admin'){
+         $_SESSION["admin"] = 1;
+    }	
 
+       header("Location: admin_dashboard.php");
+      exit();
 
+  } else {
+
+      session_destroy();
+	  setcookie(session_name(), '', time()-42000);
+      header ("Location: login_form.php");
+      exit();
+
+  }
+
+?>
 </body>
+
 </html>
-
-	<script>
-	 $(document).ready(function(){
-
-	 var dataTable = $('#usersdata').DataTable({
-	  "processing" : true,
-	  "serverSide" : true,
-	  "order" : [],
-	  "ajax" : {
-	   url:"fetch.php",
-	   type:"POST"
-	  }
-	 });
-
-	 $('#usersdata').on('draw.dt', function(){
-	  $('#usersdata').Tabledit({
-	   url:'action.php',
-	   dataType:'json',
-	   columns:{
-	    identifier : [0, 'id'],
-	    editable:[[1, 'nome'], [2, 'cognome'], [3, 'email'], [4, 'role', '{"1":"Author","2":"Admin","3":"User"}']]
-	   },
-	   restoreButton:false,
-	   onSuccess:function(data, textStatus, jqXHR)
-	   {
-	    if(data.action == 'delete')
-	    {
-	     $('#' + data.id).remove();
-	     $('#usersdata').DataTable().ajax.reload();
-	    }
-	   }
-	  });
-	 });
-	  
-	}); 
-</script>
-
-

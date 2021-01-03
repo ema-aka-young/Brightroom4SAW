@@ -28,7 +28,7 @@
                <li class="<?php if ($activePage=="blog_list.php") {echo "active"; } else  {echo "noactive";}?>"><a href="blog_list.php">Blog</a></li>
                <?php
                   if (isset($_SESSION["admin"])): ?>
-               <li class="<?php if ($activePage=="admin.php") {echo "active"; } else  {echo "noactive";}?>"><a href="admin.php">Admin</a></li>
+               <li class="<?php if ($activePage=="admin_login.php") {echo "active"; } else  {echo "noactive";}?>"><a href="admin.php">Admin</a></li>
                <?php endif; ?>
                <?php
                   if (!isset($_SESSION["login"])): ?>

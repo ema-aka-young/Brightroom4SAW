@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>FilmSearch - Sign-up</title>
+    <title>FilmSearch - Login</title>
 </head>
 <body>
 
@@ -17,11 +17,7 @@
   }
   $email = mysqli_real_escape_string($con, trim($_POST["email"]));
   $pssw = mysqli_real_escape_string($con, trim($_POST["pass"]));
-
-    /*
-    $query = "SELECT id, password,role from users where email = '$email';";
-    $query = "SELECT id, password from users where email = '$email';";
-    */
+  
 
     $query = "SELECT id,password,role from users where email = '$email';";
     $res = mysqli_query($con,$query);
