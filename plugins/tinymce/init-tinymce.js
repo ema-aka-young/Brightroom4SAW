@@ -3,14 +3,17 @@ tinymce.init({
   selector: 'textarea.tinymce',
   height: 500,
   menubar: false,
+  paste_data_images: true,
   plugins: [
-    'advlist autolink lists link image charmap print preview anchor',
+    'advlist autolink lists link image charmap print paste preview anchor',
     'searchreplace visualblocks code fullscreen',
-    'insertdatetime media table paste code help wordcount'
+    'insertdatetime image media table paste code help wordcount'
   ],
   toolbar: 'undo redo | formatselect | ' +
   'bold italic backcolor | alignleft aligncenter ' +
   'alignright alignjustify | bullist numlist outdent indent | ' +
-  'removeformat | help',
-  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+  'removeformat | link  code |  help  ',
+
+   image_advtab: true,
+
 });

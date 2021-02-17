@@ -1,45 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-      <meta name="description" content="" />
-      <meta name="author" content="" />
-      <?php require 'head.php' ?>
-   </head>
-   <header id="header" class="sticky-top">
-      <?php
-         session_start();
-         $directoryURI = $_SERVER['REQUEST_URI'];
-         $path = parse_url($directoryURI, PHP_URL_PATH);
-         $components = explode('/', $path);
-         $activePage = $components[2];
-         ?>
-      <div class="container d-flex">
-         <div class="logo mr-auto">
-            <h1 class="text-light"><a href="index.php">FilmSearch</a></h1>
-         </div>
-         <nav class="nav-menu d-none d-lg-block">
-            <ul>
-               <li class="<?php if ($activePage=="index.php" || $activePage=="") {echo "active"; } else  {echo "noactive";}?>"><a href="index.php">Home</a></li>
-               <li class="<?php if ($activePage=="aboutus.php") {echo "active"; } else  {echo "noactive";}?>"><a href="aboutus.php">About Us</a></li>
-               <li class="<?php if ($activePage=="film") {echo "active"; } else  {echo "noactive";}?>"><a href="#film">Film</a></li>
-               <li class="<?php if ($activePage=="blog_list.php") {echo "active"; } else  {echo "noactive";}?>"><a href="blog_list.php">Blog</a></li>
-               <?php
-                  if (isset($_SESSION["admin"])): ?>
-               <li class="<?php if ($activePage=="admin_login.php") {echo "active"; } else  {echo "noactive";}?>"><a href="admin.php">Admin</a></li>
-               <?php endif; ?>
-               <?php
-                  if (!isset($_SESSION["login"])): ?>
-               <li class="<?php if ($activePage=="login_form.php") {echo "active"; } else  {echo "noactive";}?>"><a href="login_form.php">Login</a></li>
-               <li class="<?php if ($activePage=="registration_form.php") {echo "active"; } else  {echo "noactive";}?>"><a href="registration_form.php">SignUp</a></li>
-               <?php else : ?>
-               <li class="<?php if ($activePage=="show_profile.php") {echo "active"; } else  {echo "noactive";}?>"><a href="show_profile.php">Profile</a></li>
-               <li class="<?php if ($activePage=="logout.php") {echo "active"; } else  {echo "noactive";}?>"><a href="logout.php">Logout</a></li>
-               <?php endif; ?>
-            </ul>
-         </nav>
+<?php include 'head.php'?>
+</head>
+<body>
+  <header id="header" class="sticky-top">
+
+    <?php
+    session_start();
+    $directoryURI = $_SERVER['REQUEST_URI'];
+    $path = parse_url($directoryURI, PHP_URL_PATH);
+    $components = explode('/', $path); //components array 
+    ?>
+
+    <div class=" d-flex flex-row">
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="/~S4668271/index.php">BrightRoom</a></h1>
       </div>
-      <hr>
-   </header>
+
+
+      <nav class="nav-menu d-none d-lg-block align-top ">
+        <ul>
+          <li class="<?php if ($components[2]=="index.php" || $components[2]=="") {echo "active"; } else  {echo "noactive";}?>"><a href="/~S4668271/index.php">Home</a></li>
+          <li class="<?php if ($components[3]=="aboutus.php") {echo "active"; } else  {echo "noactive";}?>"><a href="/~S4668271/pages/aboutus.php">About Us</a></li>
+          <li class="<?php if ($components[3]== "gallery.php") {echo "active"; } else  {echo "noactive";}?>"><a href="/~S4668271/pages/gallery.php">Gallery</a></li>
+          <li class="<?php if ($components[3]=="film_list.php" || $components[3]=="film_filtered.php"|| $components[3]=="film_single.php" || $components[3]=="film_search.php") {echo "active"; } else  {echo "noactive";}?>"><a href="/~S4668271/film/film_list.php">Film</a></li>
+          <li class="<?php if ($components[3]=="blog_list.php" || $components[3]=="blog_filtered.php"|| $components[3]=="blog_post.php" || $components[3]=="blog_search.php" ) {echo "active"; } else  {echo "noactive";}?>"><a href="/~S4668271/blog/blog_list.php">Blog</a></li>
+          <?php
+          if (isset($_SESSION["admin"])): ?>
+          <li class="drop-down <?php if ($components[3]=="users_dashboard.php" || $components[3]=="blog_dashboard.php") {echo " active"; } else  {echo " noactive";}?>"><a>Admin</a>
+            <ul>
+              <li><a href="/~S4668271/admin/users_dashboard.php">Users</a></li>
+              <li><a href="/~S4668271/admin/blog_dashboard.php">Blog</a></li>
+            </ul>
+          </li>
+        <?php endif; ?>
+        <?php
+        if (!isset($_SESSION["login"])): ?>
+        <li class="<?php if ($components[3]=="login_form.php") {echo "active"; } else  {echo "noactive";}?>"><a href="/~S4668271/pages/login_form.php">Login</a></li>
+        <li class="<?php if ($components[3]=="registration_form.php") {echo "active"; } else  {echo "noactive";}?>"><a href="/~S4668271/pages/registration_form.php">SignUp</a></li>
+      <?php else : ?>
+        <li class="<?php if ($components[3]=="show_profile.php") {echo "active"; } else  {echo "noactive";}?>"><a href="/~S4668271/private/show_profile.php">Profile</a></li>
+        <li class="<?php if ($components[3]=="logout.php") {echo "active"; } else  {echo "noactive";}?>"><a href="/~S4668271/private/logout.php">Logout</a></li>
+      <?php endif; ?>
+    </ul>
+  </nav>
+</div>
+</header>

@@ -1,0 +1,9 @@
+php_value include_path '../'
+
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+
+ErrorDocument 403 https://webdev19.dibris.unige.it/~S4668271/403.php
+ErrorDocument 404 https://webdev19.dibris.unige.it/~S4668271/404.php
