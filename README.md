@@ -26,6 +26,7 @@ The website also includes a blog, where the different authors share their travel
 ### Code
 
 Front End: Html, CSS, JS, Ajax, JQuery
+
 Back End: PHP, SQL
 
 ### Libraries used
