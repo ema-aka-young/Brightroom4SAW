@@ -12,7 +12,7 @@ The website also includes a blog, where the different authors share their travel
 * SearchBar, search between film stocks and blog posts.
 * Blog, with the opportunity to filter the posts by topic.
 * Write your post through an online word processor.
-* Eye-cathcing gallery with opportunity to filter by film manufacter.
+* Eye-cathcing gallery with the opportunity to filter by film manufacter.
 * Film stock list.
 * User registration/login.
 * Live email check if user email is already taken.
