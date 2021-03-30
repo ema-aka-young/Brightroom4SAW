@@ -1,14 +1,35 @@
 # Brightroom4SAW
-Progetto: realizzazione di un sito web per il corso di Sviluppo Applicazioni Web Anno 2020-21
 
-BrightRoom: 
-Brightroom è un sito web che assiste gli
-appassionati di fotografia analogica nella scelta e
-nell’acquisto di rullini fotografici in base ai loro
-gusti ed esigenze, fornendo una vetrina di foto
-scattate con diversi rullini e, in particolare, la
-descrizione delle loro caratteristiche principali.
-• Il Sito comprende anche un Blog, nel quale i
-diversi autori condividono, diari di viaggio, piccole
-biografie di artisti noti, recensioni di macchine
-fotografiche analogiche e molto altro. 
+### Project
+
+Website for the 2020/21 course "Web Application Development" (SAW).
+
+Brightroom is a website that helps the analog photography enthusiast choosing the best film stock for their taste and needs, giving a photo gallery showing all the photos made with all these film stocks. Every film stock is provided with a description of its characteristics and stats.
+The website also includes a blog, where the different authors share their travel diaries, small biographies of famous artist, analog camera reviews, and much more.
+
+### Features
+
+* SearchBar, search between film stocks and blog posts.
+* Blog, with the opportunity to filter the posts by topic.
+* Write your post through an online word processor.
+* Eye-cathcing gallery with opportunity to filter by film manufacter.
+* Film stock list.
+* User registration/login.
+* Live email check if user email is already taken.
+* Update of user data and password.
+* Different users roles: User, Author, Admin.
+* Admin area: users, posts list with in-line editor.
+* Minimal and smart responsive design.
+* SQL Database.
+* Safe from XSS injections.
+
+### Code
+
+Front End: Html, CSS, JS, Ajax
+Back End: PHP, SQL
+
+### Libraries used
+
+* Bootstrap
+* Aos
+* TinyMCE
