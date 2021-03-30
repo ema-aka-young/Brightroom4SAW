@@ -19,13 +19,13 @@ The website also includes a blog, where the different authors share their travel
 * Update of user data and password.
 * Different users roles: User, Author, Admin.
 * Admin area: users, posts list with in-line editor.
-* Minimal and smart responsive design.
+* Minimal, smart, mobile friendly responsive design.
 * SQL Database.
 * Safe from XSS injections.
 
 ### Code
 
-Front End: Html, CSS, JS, Ajax
+Front End: Html, CSS, JS, Ajax, JQuery
 Back End: PHP, SQL
 
 ### Libraries used
@@ -33,3 +33,5 @@ Back End: PHP, SQL
 * Bootstrap
 * Aos
 * TinyMCE
+* DataTables
+* Jquery Tabledit
