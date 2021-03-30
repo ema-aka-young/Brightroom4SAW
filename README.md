@@ -21,6 +21,7 @@ The website also includes a blog, where the different authors share their travel
 * Admin area: users, posts list with in-line editor.
 * Minimal, smart, mobile friendly responsive design.
 * SQL Database.
+* htaccess file
 * Safe from XSS injections.
 
 ### Code
